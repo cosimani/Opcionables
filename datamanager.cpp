@@ -187,6 +187,7 @@ void DataManager::responseLogin( QNetworkReply *reply )
             results.contains( "Database Error", Qt::CaseInsensitive ) )
         {
             qDebug() << "Error, algun error al guardar u obtener los datos del servidor 2";
+            emit readyLogin( "", "", "", "", "" );
             return;
         }
 
