@@ -145,7 +145,7 @@ void Question::clearScrollArea()
 
 void Question::initTimer()
 {
-    this->setAnswerTimerCounter( 35 );
+    this->setAnswerTimerCounter( 45 );
     ui->counterLabel->setText( QString::number( this->getAnswerTimerCounter() ) );
     answerTimer->start( 1000 );
 }
@@ -249,7 +249,7 @@ void Question::initQuestion( QString questionText,
     }
 
     this->initTimer();
-    this->setAnswerTimerCounter( 36 );
+    this->setAnswerTimerCounter( 46 );
 }
 
 
