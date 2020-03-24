@@ -2,6 +2,7 @@
 #include "ui_login.h"
 
 #include <QMessageBox>
+#include <QRegExpValidator>
 
 #include "question.hpp"
 
@@ -45,7 +46,7 @@ void Login::resizeEvent( QResizeEvent* )
 {
     QImage logo;
     logo.load( ":/resources/images/ubp.png" );
-    ui->logo->setFixedSize( this->width(), logo.height() * this->width() / ( float )logo.width() );
+    ui->logo->setFixedSize( this->width(), logo.height() * this->width() / logo.width() );
 }
 
 void Login::start()
@@ -132,9 +133,9 @@ void Login::slot_mostrarInstrucciones()
                              " Con esta aplicación se requiere comprender los contenidos de los videos"
                              " de Youtube y responder las preguntas múltiple opción que se presentan aquí."
                              " Hay un contador que indica el tiempo que tiene disponible para responder."
-                             " \n\nPara loguearse utilizar como nombre de usuario la primer letra del"
-                             " nombre y el apellido completo, como clave el número del teléfono celular."
-                             " \n\nConsiderar que:"
+                             " \n\nPara loguearse utilizar como nombre de usuario el mail de la UBP"
+                             " sin el @ubp.edu.ar y como clave el número del teléfono celular sin"
+                             " indicar el +54 9 \n\nConsiderar que:"
                              " \n    - Al loguearse se empieza con la primer pregunta"
                              " \n    - Si se cierra la aplicación se responde mal la pregunta actual"
                              " \n\nBuena suerte!!"
