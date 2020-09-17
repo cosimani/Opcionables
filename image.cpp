@@ -22,7 +22,7 @@ void Image::setImage( QString image, int fillPolicy )
 void Image::soyLogo()
 {
     this->policy = ADJUST;
-    QString query( "http://www.vayra.com.ar/opcionables/opcionables.php?key=0pcionables&action=logoUrl" );
+    QString query( "http://www.diagnosticocordoba4-0.com.ar/opcionables/opcionables.php?key=0pcionables&action=logoUrl" );
 
     mgr->get( QNetworkRequest( QUrl( query ) ) );
 }

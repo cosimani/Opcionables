@@ -16,7 +16,7 @@ bool DataManager::doQuery( QVector< QStringList >params )
 {
     if( !this->applyForManager() ) return false;
 
-    QString query( "http://www.vayra.com.ar/opcionables/opcionables.php?" );
+    QString query( "http://www.diagnosticocordoba4-0.com.ar/opcionables/opcionables.php?" );
     query.append( "key=0pcionables" );
 
     for( int i = 0; i < params.size(); i++ )
